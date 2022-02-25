@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">  
+<generatorConfiguration>  
+    <classPathEntry  location="mysql-connector-java-5.1.25-bin.jar"/>  
+    <context id="DB2Tables"  targetRuntime="MyBatis3">  
+        <commentGenerator>  
+            <property name="suppressDate" value="true"/>  
+            <property name="suppressAllComments" value="true"/>  
+        </commentGenerator>  
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/course_range_sys" userId="root" password="root">  
+        </jdbcConnection>  
+        <javaTypeResolver>  
+            <property name="forceBigDecimals" value="false"/>  
+        </javaTypeResolver>  
+        <javaModelGenerator targetPackage="com.course.model" targetProject="../../src">  
+            <property name="enableSubPackages" value="true"/>  
+            <property name="trimStrings" value="true"/>  
+        </javaModelGenerator>  
+        <sqlMapGenerator targetPackage="com.course.mapping" targetProject="../../src">  
+            <property name="enableSubPackages" value="true"/>  
+        </sqlMapGenerator>  
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.course.dao" targetProject="../../src">  
+            <property name="enableSubPackages" value="true"/>  
+        </javaClientGenerator>  
+		<table tableName="admin_info" domainObjectName="AdminInfo" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="teacher_info" domainObjectName="TeacherInfo" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="student_info" domainObjectName="StudentInfo" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="major_info" domainObjectName="MajorInfo" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="major_direct_info" domainObjectName="MajorDirectInfo" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="class_info" domainObjectName="ClassInfo" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="term_info" domainObjectName="TermInfo" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="room_info" domainObjectName="RoomInfo" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="course_info" domainObjectName="CourseInfo" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="teacher_time_info" domainObjectName="TeacherTimeInfo" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="student_time_info" domainObjectName="StudentTimeInfo" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="course_range_info" domainObjectName="CourseRangeInfo" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="stu_range_info" domainObjectName="StuRangeInfo" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+
+    </context>  
+</generatorConfiguration>  
